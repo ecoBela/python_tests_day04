@@ -17,6 +17,19 @@ def add_friend(person, new_friend):
 def remove_friend(person, ex_friend):
     person["friends"].remove(ex_friend)
         
+def total_money(people):
+    wallet = []
+    for person in people:
+        wallet.append(person["monies"])
+        total_wallet = sum(wallet)
+    return total_wallet
+
+def loan(lender, lendee, amount):
+    lender["monies"] = lender["monies"] - amount
+    lendee["monies"] = lendee["monies"] + amount
+    print(lender["monies"])
+    print(lendee["monies"])
+
 
 
 
